@@ -34,4 +34,11 @@ service / on new graphql:Listener(8090) {
         }
         return "Hello, " + name;
     }
+
+    resource function get myquery() returns Order {
+
+    }
+}
+
+service class Order {
 }

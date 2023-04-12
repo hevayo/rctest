@@ -28,4 +28,16 @@ service / on new http:Listener(9090) {
         }
         return "Hello, " + name;
     }
+
+    resource function get path(string name) returns error?|OkOrder {
+
+    }
 }
+
+type OkOrder record {|
+    *http:Ok;
+    Order body;
+|};
+
+type Order record {
+};
